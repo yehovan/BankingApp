@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class BankingApp {
     public static void main(String[] args) {
-        boolean exit = false;
-        boolean block = false;
-        boolean x = false;  //status "czy jest zalogowany?
+        boolean exit = false; //status kliknięcia wyjścia
+        boolean block = false; //bug fix, aby móc przejść z pierwszego ekranu do wyjścia
+        boolean loginstatus = false;  //status "czy jest zalogowany?
         do {
             Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
             AccountDetails account = new AccountDetails();
             do {
                 System.out.println("Hello in our bank\n" +
-                        "1. Login\n" +
+                        //"1. Login\n" +
                         "2. Create new acount\n" +
                         "3. Exit");
                 int z = scanner.nextInt();
@@ -28,7 +28,7 @@ public class BankingApp {
                         break;
                     case 2:
                         account.createAccount();
-                        x = true;
+                        loginstatus = true;
                         exit = false;
                         break;
                     case 3:
@@ -36,7 +36,7 @@ public class BankingApp {
                         block = true;
                         break;
                 }
-            } while (x == false & exit == false);//[x == false] AND [exit == false]);
+            } while (loginstatus == false & exit == false);
             int inputNumber;
             if (block == false) {
                 do {
@@ -58,13 +58,13 @@ public class BankingApp {
                             account.cashout();
                             break;
                         case 4:
-                            x = false;
+                            loginstatus = false;
                             break;
                         case 5:
                             exit = true;
                             break;
                     }
-                } while (inputNumber != 5 & inputNumber != 4);
+                }while (inputNumber != 5 & inputNumber != 4);
             }
 
         }

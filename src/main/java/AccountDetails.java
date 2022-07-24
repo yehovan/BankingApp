@@ -6,6 +6,7 @@ public class AccountDetails {
     private String login;
     private long balance;
     Scanner scanner = new Scanner(System.in);
+
     public void createAccount(){
         System.out.println("enter your account number:");
         accountNumber = scanner.next();
@@ -32,6 +33,14 @@ public class AccountDetails {
             balance = balance - amount;
             System.out.println("Take your cash");
         }
+    }
+
+    public long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
     }
 
     public void showAccount() {
