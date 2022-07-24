@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7107aba9-df5a-4fd4-9c27-4b312a2572c1" name="Changes" comment="dodanie reszty funkcjonalności">
+    <list default="true" id="7107aba9-df5a-4fd4-9c27-4b312a2572c1" name="Changes" comment="dodanie statusu zalogowania;&#10;jako że mam już funkcje wpłacania usunąłem zapytanie systemu o saldo przy tworzeniu konta&#10;tworzenie konta umożliwiłem użytkownikowi niezalogowanemu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BankingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BankingApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658659618985</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dodanie statusu zalogowania;&#10;jako że mam już funkcje wpłacania usunąłem zapytanie systemu o saldo przy tworzeniu konta&#10;tworzenie konta umożliwiłem użytkownikowi niezalogowanemu">
+      <created>1658663643425</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658663643425</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +109,7 @@
     <MESSAGE value="początek pracy" />
     <MESSAGE value="stworzenie interfejsu użytkownika z 4 opcjami, stworzenie w pełni funkcjonalnej opcji nr 4 wyjścia z programu" />
     <MESSAGE value="dodanie reszty funkcjonalności" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie reszty funkcjonalności" />
+    <MESSAGE value="dodanie statusu zalogowania;&#10;jako że mam już funkcje wpłacania usunąłem zapytanie systemu o saldo przy tworzeniu konta&#10;tworzenie konta umożliwiłem użytkownikowi niezalogowanemu" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie statusu zalogowania;&#10;jako że mam już funkcje wpłacania usunąłem zapytanie systemu o saldo przy tworzeniu konta&#10;tworzenie konta umożliwiłem użytkownikowi niezalogowanemu" />
   </component>
 </project>

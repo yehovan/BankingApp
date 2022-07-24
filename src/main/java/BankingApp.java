@@ -2,46 +2,73 @@ import java.util.Scanner;
 
 public class BankingApp {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
-        AccountDetails account = new AccountDetails();
-        boolean x = false; //status "czy jest zalogowany?
+        boolean exit = false;
+        boolean block = false;
+        boolean x = false;  //status "czy jest zalogowany?
         do {
-            System.out.println("Hello in our bank\n" +
-                    "1. Login\n" +
-                    "2. Create new acount");
-            int z = scanner.nextInt();
-            switch(z){
-                case 1:
-                    System.out.println("przejście do okna logowania");
-                    break;
-                case 2:
-                    account.createAccount();
-                    x = true;
-                    break;
-            }
-        }while(x==false);
-        int inputNumber;
-        do{
-            System.out.println("\nWhat do you want to do?\n" +
-                    "1. Show account info\n" +
-                    "2. Cash deposit\n" +
-                    "3. Cash withdrawal\n" +
-                    "4. Exit");
-            inputNumber = scanner.nextInt();
-            switch(inputNumber){
-                case 1:
-                    account.showAccount();
-                    break;
-                case 2:
-                    account.cashin();
-                    break;
-                case 3:
-                    account.cashout();
-                    break;
-            }
-        }while(inputNumber != 4);
+            Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
+            AccountDetails account = new AccountDetails();
+            do {
+                System.out.println("Hello in our bank\n" +
+                        "1. Login\n" +
+                        "2. Create new acount\n" +
+                        "3. Exit");
+                int z = scanner.nextInt();
+                switch (z) {
+                    case 1:
+                        String inputlogin;
+                        System.out.println("enter your login");
+                        inputlogin = scanner.next();
+                        /*if (inputlogin == login) {
+                            x = true;
+                        } else {
+                            System.out.println("there is no user with this login");
+                        }*/
 
+                        break;
+                    case 2:
+                        account.createAccount();
+                        x = true;
+                        exit = false;
+                        break;
+                    case 3:
+                        exit = true;
+                        block = true;
+                        break;
+                }
+            } while (x == false & exit == false);//[x == false] AND [exit == false]);
+            int inputNumber;
+            if (block == false) {
+                do {
+                    System.out.println("\nWhat do you want to do?\n" +
+                            "1. Show account info\n" +
+                            "2. Cash deposit\n" +
+                            "3. Cash withdrawal\n" +
+                            "4. Log out\n" +
+                            "5. Exit");
+                    inputNumber = scanner.nextInt();
+                    switch (inputNumber) {
+                        case 1:
+                            account.showAccount();
+                            break;
+                        case 2:
+                            account.cashin();
+                            break;
+                        case 3:
+                            account.cashout();
+                            break;
+                        case 4:
+                            x = false;
+                            break;
+                        case 5:
+                            exit = true;
+                            break;
+                    }
+                } while (inputNumber != 5 & inputNumber != 4);
+            }
+
+        }
+        while (exit == false);
     }
-
-
 }
+
