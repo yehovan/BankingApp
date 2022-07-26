@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class AccountDetails {
     boolean loggedStatus;//status zalogowania
-    int Lp = 0; //liczba zarejestrowanych użytkowników
+    int Lp = 1; //liczba zarejestrowanych użytkowników
     String name; //podręczna pamięć nazwy
     String namemem[] = new String[99]; //baza nazw
     int accountNumber; //podręczna pamięć numeru konta
@@ -11,18 +11,14 @@ public class AccountDetails {
     double balance;//podręczna pamięć salda
     double balancemem[] = new double[99];//baza sald
     Scanner scanner = new Scanner(System.in);//funkcja skanera
-
         public void createAccount(){
             System.out.println("enter your account name");
             name = scanner.next();
             System.out.println("enter login");
             login = scanner.next();
             accountNumber = Lp+1;
-            accountNumbermem[Lp] = accountNumber;
-            balancemem[Lp] = 0;
-            namemem[Lp] = name;
-            loginmem[Lp] = login;
-            loggedStatus = true;
+            accountNumbermem[accountNumber-1] = accountNumber;
+            balance = 0;
             ++Lp;
         }
     public void loginIntoExistingAcc() {
@@ -30,14 +26,11 @@ public class AccountDetails {
         accountNumber = scanner.nextInt();
         System.out.println("enter your login");
         login = scanner.next();
-       if((accountNumber == accountNumbermem[accountNumber-1])&( login == loginmem[accountNumber-1]))
-       {
+       if((accountNumber == accountNumbermem[accountNumber-1])&(login == loginmem[accountNumber-1])){
             name = namemem[accountNumber-1];
             balance = balancemem[accountNumber-1];
             loggedStatus = true;
-        }
-        else{
-            System.out.println("wrong login or account number, please try again");
+        }else{
             loggedStatus = false;
         }
     }
@@ -52,7 +45,7 @@ public class AccountDetails {
             namemem[accountNumber-1] = name;
             loginmem[accountNumber-1] = login;
             balancemem[accountNumber-1] = balance;
-        System.out.println("updating complete");
+        System.out.println("update complete");
     }
     public void cashout(){
         long amount = 0;

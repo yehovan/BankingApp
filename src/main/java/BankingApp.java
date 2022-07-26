@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class BankingApp {
     public static void main(String[] args) {
         boolean exit = false; //status kliknięcia wyjścia
-        boolean block = false; //bug fix, aby móc przejść z pierwszego ekranu do wyjścia
+        boolean block = false; //bugfix, aby działał 3. exit
         boolean loginstatus = false;  //status "czy jest zalogowany?
         Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
         AccountDetails account = new AccountDetails();
@@ -17,18 +17,20 @@ public class BankingApp {
                 switch (z) {
                     case 1:
                         account.loginIntoExistingAcc();
-                        account.UpdateUserData();
+                        if (account.loggedStatus == true) {
+                            account.UpdateUserData();
+                            System.out.println("welcome!");
+                            loginstatus = true;
+                        }
+                        else{
+                            System.out.println("wrong login or account number, please try again");
+                            loginstatus = false;
+                        }
                         break;
                     case 2:
                         account.createAccount();
-                        if(account.loggedStatus == !loginstatus) {
-                            loginstatus = true;
-                            exit = false;
-                        }
-                        else{
-                            System.out.println("wrong account number or login");
-                            exit = true;
-                        }
+                        account.UpdateUserData();
+                        loginstatus = true;
                         break;
                     case 3:
                         exit = true;
