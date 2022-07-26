@@ -5,31 +5,30 @@ public class BankingApp {
         boolean exit = false; //status kliknięcia wyjścia
         boolean block = false; //bug fix, aby móc przejść z pierwszego ekranu do wyjścia
         boolean loginstatus = false;  //status "czy jest zalogowany?
+        Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
+        AccountDetails account = new AccountDetails();
         do {
-            Scanner scanner = new Scanner(System.in);//zdefiniowanie skanowania
-            AccountDetails account = new AccountDetails();
             do {
                 System.out.println("Hello in our bank\n" +
-                        //"1. Login\n" +
+                        "1. Login\n" +
                         "2. Create new acount\n" +
                         "3. Exit");
                 int z = scanner.nextInt();
                 switch (z) {
                     case 1:
-                        String inputlogin;
-                        System.out.println("enter your login");
-                        inputlogin = scanner.next();
-                        /*if (inputlogin == login) {
-                            x = true;
-                        } else {
-                            System.out.println("there is no user with this login");
-                        }*/
-
+                        account.loginIntoExistingAcc();
+                        account.UpdateUserData();
                         break;
                     case 2:
                         account.createAccount();
-                        loginstatus = true;
-                        exit = false;
+                        if(account.loggedStatus == !loginstatus) {
+                            loginstatus = true;
+                            exit = false;
+                        }
+                        else{
+                            System.out.println("wrong account number or login");
+                            exit = true;
+                        }
                         break;
                     case 3:
                         exit = true;
@@ -53,11 +52,14 @@ public class BankingApp {
                             break;
                         case 2:
                             account.cashin();
+                            account.UpdateUserData();
                             break;
                         case 3:
                             account.cashout();
+                            account.UpdateUserData();
                             break;
                         case 4:
+                            account.UpdateUserData();
                             loginstatus = false;
                             break;
                         case 5:
