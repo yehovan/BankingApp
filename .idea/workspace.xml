@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7107aba9-df5a-4fd4-9c27-4b312a2572c1" name="Changes" comment="dodanie możliwości utworzenia większej ilości użytkowników,&#10;rozpoczęcie pracy nad opcją logowania">
+    <list default="true" id="7107aba9-df5a-4fd4-9c27-4b312a2572c1" name="Changes" comment="dodanie funkcjonalności logowania, sprzątanie kodu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BankingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BankingApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658866390764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dodanie funkcjonalności logowania, sprzątanie kodu">
+      <created>1658924004189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658924004189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +154,8 @@
     <MESSAGE value="dodanie statusu zalogowania;&#10;jako że mam już funkcje wpłacania usunąłem zapytanie systemu o saldo przy tworzeniu konta&#10;tworzenie konta umożliwiłem użytkownikowi niezalogowanemu" />
     <MESSAGE value="dodawanie funkcji testowych i rozwój funkcji samego programu" />
     <MESSAGE value="dodanie możliwości utworzenia większej ilości użytkowników,&#10;rozpoczęcie pracy nad opcją logowania" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie możliwości utworzenia większej ilości użytkowników,&#10;rozpoczęcie pracy nad opcją logowania" />
+    <MESSAGE value="dodanie funkcjonalności logowania, sprzątanie kodu" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie funkcjonalności logowania, sprzątanie kodu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bankowa_aplikacja$BankingApp.ic" NAME="BankingApp Coverage Results" MODIFIED="1658852262106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

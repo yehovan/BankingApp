@@ -9,11 +9,10 @@ public class BankingApp {
         do {
             do {
                 loginstatus = false;
-                System.out.println("""
-                        Hello in our bank
-                        1. Login
-                        2. Create new acount
-                        3. Exit""");
+                System.out.println("welcome in Yebank - your favorite banking system written in java!\n" +
+                        "Currently "+account.Lp+" registered users.\n"+ "1. Login\n"+
+                        "2. Create new acount\n"+
+                        "3. Exit");
                 int z = scanner.nextInt();
                 switch (z) {
                     case 1 -> {
