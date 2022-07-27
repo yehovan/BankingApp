@@ -24,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.2/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -146,16 +149,6 @@
     <MESSAGE value="dodawanie funkcji testowych i rozwój funkcji samego programu" />
     <MESSAGE value="dodanie możliwości utworzenia większej ilości użytkowników,&#10;rozpoczęcie pracy nad opcją logowania" />
     <option name="LAST_COMMIT_MESSAGE" value="dodanie możliwości utworzenia większej ilości użytkowników,&#10;rozpoczęcie pracy nad opcją logowania" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
-          <option name="timeStamp" value="4" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bankowa_aplikacja$BankingApp.ic" NAME="BankingApp Coverage Results" MODIFIED="1658852262106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
